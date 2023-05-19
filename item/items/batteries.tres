@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://csj7imnsvuwwb"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_7fek1"]
+[ext_resource type="Texture2D" uid="uid://hynsfakslcqn" path="res://images/batteries.png" id="2_re2gl"]
+
+[resource]
+script = ExtResource("1_7fek1")
+name = "batteries"
+description = "A pack of batteries"
+stackable = true
+texture = ExtResource("2_re2gl")
+value = 3
+cost = 10

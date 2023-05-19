@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dycal3bo3txq6"]
+
+[ext_resource type="Script" path="res://interactItems/box.gd" id="1_gesc2"]
+[ext_resource type="Texture2D" uid="uid://bp3b063h4kwye" path="res://images/tileMap.png" id="2_t7pa0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3df7h"]
+size = Vector2(19.5, 22.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_586o2"]
+atlas = ExtResource("2_t7pa0")
+region = Rect2(128, 144, 16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["external_inventory"]]
+position = Vector2(-18, 0)
+collision_layer = 5
+collision_mask = 0
+script = ExtResource("1_gesc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.624996, -11.125)
+shape = SubResource("RectangleShape2D_3df7h")
+
+[node name="box" type="Sprite2D" parent="."]
+position = Vector2(-0.874999, -12.875)
+scale = Vector2(1.64063, 1.64063)
+texture = SubResource("AtlasTexture_586o2")
