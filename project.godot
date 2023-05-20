@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="City Explorer"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://SENCES/node_2d.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Camera="*res://camera.tscn"
+Camera="*res://SENCES/camera.tscn"
 MoneyManger="*res://MoneyManger.gd"
 
 [display]

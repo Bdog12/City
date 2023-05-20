@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7f7s7bjmy5se"
-path="res://.godot/imported/pixel.png-33fdff2f0d6b4058cdb2ee40ad421cba.ctex"
+uid="uid://d0uushbl0ncfi"
+path="res://.godot/imported/whiteFlower.png-5eb1ecc862b916b893f87a83f5085bd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/scene_manager/shader_patterns/pixel.png"
-dest_files=["res://.godot/imported/pixel.png-33fdff2f0d6b4058cdb2ee40ad421cba.ctex"]
+source_file="res://Images/whiteFlower.png"
+dest_files=["res://.godot/imported/whiteFlower.png-5eb1ecc862b916b893f87a83f5085bd7.ctex"]
 
 [params]
 

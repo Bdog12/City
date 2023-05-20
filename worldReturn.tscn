@@ -49,7 +49,7 @@ monitorable = false
 script = ExtResource("1_5lfvb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-21, -39)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_80cus")
 
 [node name="Label" type="Label" parent="."]

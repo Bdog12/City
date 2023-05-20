@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf23tset1p8kk"
-path="res://.godot/imported/circle.png-49deb66a2171d4476d4de5b40b7c62d8.ctex"
+uid="uid://c6gnney08v7dw"
+path="res://.godot/imported/citysimple.png-62307dd2cb0e1ce8817505003f8538a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/scene_manager/shader_patterns/circle.png"
-dest_files=["res://.godot/imported/circle.png-49deb66a2171d4476d4de5b40b7c62d8.ctex"]
+source_file="res://Images/citysimple.png"
+dest_files=["res://.godot/imported/citysimple.png-62307dd2cb0e1ce8817505003f8538a8.ctex"]
 
 [params]
 
