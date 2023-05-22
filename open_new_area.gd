@@ -1,5 +1,5 @@
 extends Area2D
-
+@export var NewZone = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("up and down")
@@ -8,7 +8,7 @@ func _ready():
 func _process(delta):
 	if $Label.visible == true:
 		if Input.is_action_just_pressed("interact"):
-			get_tree().change_scene_to_file("res://Room.tscn")
+			Global.changeStage(NewZone)
 
 			pass
 

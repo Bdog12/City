@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Camera="*res://SENCES/camera.tscn"
 MoneyManger="*res://MoneyManger.gd"
+Global="*res://global.gd"
 
 [display]
 

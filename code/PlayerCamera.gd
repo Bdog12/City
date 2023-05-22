@@ -5,8 +5,7 @@ extends Camera2D
 var smoothing:float
 
 var current_room_center: Vector2
-var current_room_size: Vector2
-
+var current_room_size: Vector2 
 @onready var view_size: Vector2 = get_viewport_rect().size
 var zoom_view_size: Vector2
 

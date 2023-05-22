@@ -227,6 +227,7 @@ func can_double_jump():
 ## Same as is_on_floor(), but also returns true if gravity is reversed and you are on the ceiling
 func is_feet_on_ground():
 	if is_on_floor() and default_gravity >= 0:
+		current_stamina = max_stamina
 		return true
 	if is_on_ceiling() and default_gravity <= 0:
 		return true

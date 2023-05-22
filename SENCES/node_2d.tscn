@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cylsvcrso6stt"]
 
-[ext_resource type="PackedScene" uid="uid://56c2u7lelald" path="res://player.tscn" id="4_sfmng"]
+[ext_resource type="PackedScene" uid="uid://56c2u7lelald" path="res://SENCES/player.tscn" id="4_sfmng"]
 [ext_resource type="Script" path="res://code/PlayerCamera.gd" id="5_0n061"]
 [ext_resource type="Texture2D" uid="uid://c6gnney08v7dw" path="res://Images/citysimple.png" id="7_d3lfq"]
 [ext_resource type="Script" path="res://ParallaxLayer2.gd" id="8_0pyuj"]
