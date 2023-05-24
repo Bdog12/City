@@ -132,82 +132,85 @@ func _ready():
 
 
 func _input(_event):
-	acc.x = 0
-	if Input.is_action_pressed(input_left):
-		acc.x = -max_acceleration
-		$AnimatedSprite2D.flip_h = true
-		if is_feet_on_ground():
-			$AnimationPlayer.play("run")
-	if Input.is_action_pressed(input_right):
-		acc.x = max_acceleration
-		$AnimatedSprite2D.flip_h = false
-		if is_feet_on_ground():
-			$AnimationPlayer.play("run")
+	if PlayerBools.Talking == false:
+		acc.x = 0
+		if Input.is_action_pressed(input_left):
+			acc.x = -max_acceleration
+			$AnimatedSprite2D.flip_h = true
+			if is_feet_on_ground():
+				$AnimationPlayer.play("run")
+		if Input.is_action_pressed(input_right):
+			acc.x = max_acceleration
+			$AnimatedSprite2D.flip_h = false
+			if is_feet_on_ground():
+				$AnimationPlayer.play("run")
 
-	if Input.is_action_just_released(input_right) or Input.is_action_just_released(input_left):
-			velocity.x = 0
-	if Input.is_action_just_pressed(input_jump):
-		holding_jump = true
-		jump_buffer_timer.start()
-		
-		if (not can_hold_jump and can_ground_jump()) or can_double_jump():
-			jump()
-		
-	if Input.is_action_just_released(input_jump):
-		holding_jump = false
+		if Input.is_action_just_released(input_right) or Input.is_action_just_released(input_left):
+				velocity.x = 0
+		if Input.is_action_just_pressed(input_jump):
+			holding_jump = true
+			jump_buffer_timer.start()
+			
+			if (not can_hold_jump and can_ground_jump()) or can_double_jump():
+				jump()
+			
+		if Input.is_action_just_released(input_jump):
+			holding_jump = false
 
 
 func _physics_process(delta):
-	StaminaLabel()
 	
-	if Input.is_action_pressed("ui_text_backspace"):
-		get_tree().quit()
-	
-	
-	_input(input_event)
-	if is_feet_on_ground() and current_jump_type == JumpType.NONE:
-		coyote_timer.start()
-	if not coyote_timer.is_stopped():
-		jumps_left = max_jump_amount
-	if $AnimatedSprite2D.flip_h == true:
-		$rightWall.enabled = false
-		$leftwall.enabled = true
-	else: 
-		$rightWall.enabled = true
-		$leftwall.enabled = false
-	# Check if we just hit the ground this frame
-	if not _was_on_ground and is_feet_on_ground():
-		print("ground")
-		current_stamina = max_stamina
-		jumpStart = false
-		current_jump_type = JumpType.NONE
-		if not jump_buffer_timer.is_stopped() and not can_hold_jump: 
-			jump()
+	if PlayerBools.Talking == false:
+		StaminaLabel()
 		
-		hit_ground.emit()
-	
-	
-	# Cannot do this in _input because it needs to be checked every frame
-	if Input.is_action_pressed(input_jump):
-		if can_ground_jump() and can_hold_jump:
-			jump()
-	
-	var gravity = apply_gravity_multipliers_to(default_gravity)
-	acc.y = gravity
-	WallSlideig()
-	# Apply friction
-	velocity.x *= 1 / (1 + (delta * friction))
-	velocity += acc * delta
-	if velocity.x == 0  and is_on_floor():
-		if jumpStart == false:
-			$AnimationPlayer.play("idle")
-	
-	var fallingSpeed = velocity.y	
-	if fallingSpeed >=10:
-		$AnimationPlayer.play("jumpfall")
-	
-	_was_on_ground = is_feet_on_ground()
-	move_and_slide()
+		if Input.is_action_pressed("ui_text_backspace"):
+			get_tree().quit()
+		
+		
+		_input(input_event)
+		if is_feet_on_ground() and current_jump_type == JumpType.NONE:
+			coyote_timer.start()
+		if not coyote_timer.is_stopped():
+			jumps_left = max_jump_amount
+		if $AnimatedSprite2D.flip_h == true:
+			$rightWall.enabled = false
+			$leftwall.enabled = true
+		else: 
+			$rightWall.enabled = true
+			$leftwall.enabled = false
+		# Check if we just hit the ground this frame
+		if not _was_on_ground and is_feet_on_ground():
+			print("ground")
+			current_stamina = max_stamina
+			jumpStart = false
+			current_jump_type = JumpType.NONE
+			if not jump_buffer_timer.is_stopped() and not can_hold_jump: 
+				jump()
+			
+			hit_ground.emit()
+		
+		
+		# Cannot do this in _input because it needs to be checked every frame
+		if Input.is_action_pressed(input_jump):
+			if can_ground_jump() and can_hold_jump:
+				jump()
+		
+		var gravity = apply_gravity_multipliers_to(default_gravity)
+		acc.y = gravity
+		WallSlideig()
+		# Apply friction
+		velocity.x *= 1 / (1 + (delta * friction))
+		velocity += acc * delta
+		if velocity.x == 0  and is_on_floor():
+			if jumpStart == false:
+				$AnimationPlayer.play("idle")
+		
+		var fallingSpeed = velocity.y	
+		if fallingSpeed >=10:
+			$AnimationPlayer.play("jumpfall")
+		
+		_was_on_ground = is_feet_on_ground()
+		move_and_slide()
 
 
 func can_ground_jump() -> bool:

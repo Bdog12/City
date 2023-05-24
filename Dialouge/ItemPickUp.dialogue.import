@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b6yv54on58guc"
+path="res://.godot/imported/ItemPickUp.dialogue-8941dcbc89d69ac4345509ff17ab327a.tres"
+
+[deps]
+
+source_file="res://Dialouge/ItemPickUp.dialogue"
+dest_files=["res://.godot/imported/ItemPickUp.dialogue-8941dcbc89d69ac4345509ff17ab327a.tres"]
+
+[params]
+

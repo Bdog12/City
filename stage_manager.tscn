@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cn1pldr8ky26i"]
 
-[ext_resource type="Script" path="res://global.gd" id="1_j5gbs"]
+[ext_resource type="Script" path="res://code/global.gd" id="1_j5gbs"]
 
 [sub_resource type="Animation" id="Animation_uum5b"]
 resource_name = "loading"

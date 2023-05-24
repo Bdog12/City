@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtn7kmkjr6kr8"]
+[gd_scene load_steps=7 format=3 uid="uid://b1i2ibno1ipat"]
 
-[ext_resource type="Script" path="res://worldReturn.gd" id="1_5lfvb"]
+[ext_resource type="Script" path="res://code/DialougeStarter.gd" id="1_1jj2k"]
+[ext_resource type="Theme" uid="uid://djjeaqc78ns0e" path="res://FontTheme.tres" id="2_hg43h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_80cus"]
-size = Vector2(20, 23)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3oqpu"]
+size = Vector2(49, 38)
 
 [sub_resource type="Animation" id="Animation_hlu2c"]
 length = 0.001
@@ -42,23 +43,24 @@ _data = {
 "up and down": SubResource("Animation_2xp8e")
 }
 
-[node name="OpenNewArea" type="Area2D"]
+[node name="DiaLogueArea" type="Area2D"]
 collision_layer = 4
 collision_mask = 4
 monitorable = false
-script = ExtResource("1_5lfvb")
+script = ExtResource("1_1jj2k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -11)
-shape = SubResource("RectangleShape2D_80cus")
+position = Vector2(-0.5, -18)
+shape = SubResource("RectangleShape2D_3oqpu")
+debug_color = Color(0.827451, 0.305882, 0.643137, 0.419608)
 
 [node name="Label" type="Label" parent="."]
 visible = false
 offset_left = 10.0
 offset_top = -37.0
-offset_right = 23.0
-offset_bottom = -16.0
-theme_override_font_sizes/font_size = 13
+offset_right = 26.0
+offset_bottom = -6.0
+theme = ExtResource("2_hg43h")
 text = "E"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

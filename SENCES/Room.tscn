@@ -1,11 +1,12 @@
-[gd_scene load_steps=39 format=3 uid="uid://c7jpfpc12i1t5"]
+[gd_scene load_steps=40 format=3 uid="uid://c7jpfpc12i1t5"]
 
-[ext_resource type="Script" path="res://ZoomCamara.gd" id="1_r45wm"]
+[ext_resource type="Script" path="res://code/ZoomCamara.gd" id="1_r45wm"]
 [ext_resource type="Texture2D" uid="uid://22nj10l6638k" path="res://Images/Room.png" id="2_a1ktm"]
 [ext_resource type="Texture2D" uid="uid://bqu8gemjleoqh" path="res://Images/tileMap.png" id="5_4fkv6"]
-[ext_resource type="Script" path="res://open_new_area.gd" id="5_81brr"]
+[ext_resource type="PackedScene" uid="uid://dcwhqtm7jm3cn" path="res://SENCES/open_new_area.tscn" id="5_vod1y"]
+[ext_resource type="PackedScene" uid="uid://b1i2ibno1ipat" path="res://SENCES/DialogueArea.tscn" id="6_miu22"]
 [ext_resource type="PackedScene" uid="uid://56c2u7lelald" path="res://SENCES/player.tscn" id="6_y5l84"]
-[ext_resource type="PackedScene" uid="uid://dtn7kmkjr6kr8" path="res://worldReturn.tscn" id="7_5doym"]
+[ext_resource type="Resource" uid="uid://x2ub2ajs1blu" path="res://Dialouge/girl.dialogue" id="7_800ca"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_peaup"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1271,11 +1272,6 @@ collision_mask = 1
 [node name="PlayerCamera" type="Camera2D" parent="."]
 zoom = Vector2(6.353, 6.353)
 
-[node name="OpenNewArea" parent="." instance=ExtResource("7_5doym")]
-position = Vector2(-48, 8)
-script = ExtResource("5_81brr")
-NewZone = "main"
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7lyjb")
 format = 2
@@ -1288,5 +1284,13 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(65533, 1638400, 2)
+
+[node name="OpenNewArea" parent="." instance=ExtResource("5_vod1y")]
+position = Vector2(-56, 16)
+NewZone = "main"
+
+[node name="DiaLogueArea" parent="." instance=ExtResource("6_miu22")]
+position = Vector2(56, 16)
+dialogue_resource = ExtResource("7_800ca")
 
 [editable path="PlatformingPlayer"]

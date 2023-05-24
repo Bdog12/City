@@ -1,16 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfj51myigg1si"]
 
 [ext_resource type="Texture2D" uid="uid://dn5bh73q4hb7s" path="res://Images/leaf.png" id="1_e05d8"]
-[ext_resource type="Script" path="res://WindAdded.gd" id="2_po175"]
+[ext_resource type="Script" path="res://code/WindAdded.gd" id="2_po175"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v4c7y"]
 emission_shape = 3
-emission_box_extents = Vector3(15.929, 5.467, 1)
-particle_flag_disable_z = true
-spread = 86.16
+emission_box_extents = Vector3(50, 5.413, 1)
+flatness = 1.0
 gravity = Vector3(0, 20, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 linear_accel_min = 11.43
 linear_accel_max = 11.43
 tangential_accel_min = -20.0
@@ -19,13 +16,10 @@ damping_max = 7.03
 angle_min = -390.9
 angle_max = 473.1
 scale_max = 1.2
-collision_mode = 1
-collision_friction = 1.0
-collision_bounce = 1.0
 collision_use_scale = true
 
 [node name="leaf" type="GPUParticles2D"]
-amount = 16
+amount = 10
 sub_emitter = NodePath(".")
 process_material = SubResource("ParticleProcessMaterial_v4c7y")
 texture = ExtResource("1_e05d8")

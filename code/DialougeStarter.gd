@@ -1,6 +1,7 @@
 extends Area2D
-@export var NewZone = ""
-# Called when the node enters the scene tree for the first time.
+const Ballon = preload("res://SENCES/balloon.tscn")
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "start"
 func _ready():
 	$AnimationPlayer.play("up and down")
 	
@@ -8,8 +9,9 @@ func _ready():
 func _process(delta):
 	if $Label.visible == true:
 		if Input.is_action_just_pressed("interact"):
-			Global.changeStage(NewZone)
-
+			var ballon:Node = Ballon.instantiate()
+			get_tree().current_scene.add_child(ballon)
+			ballon.start(dialogue_resource,dialogue_start)
 			pass
 
 

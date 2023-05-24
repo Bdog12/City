@@ -1,0 +1,18 @@
+~ start
+
+
+
+set Talking = true
+Shop: [[Hi|Hello|Howdy]], [do Setitems()]this is some dialogue.
+Shop: Here are some choices.
+- First one [if Have == false ]
+	Nathan: you have my item 
+	thank you
+- Second one
+	Nathan: You picked the second one.
+- End the conversation 
+	set Talking = false
+	=> END
+Nathan: For more information see the online documentation.
+set Talking = false
+=> END

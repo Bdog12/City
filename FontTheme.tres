@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://djjeaqc78ns0e"]
+
+[ext_resource type="FontFile" uid="uid://ck0tbtbt1820d" path="res://Images/ExpressionPro.woff" id="1_km581"]
+
+[resource]
+default_font = ExtResource("1_km581")
+default_font_size = 32
+RichTextLabel/fonts/bold_font = ExtResource("1_km581")
+RichTextLabel/fonts/mono_font = ExtResource("1_km581")
+RichTextLabel/fonts/normal_font = ExtResource("1_km581")

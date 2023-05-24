@@ -1,9 +1,10 @@
-[gd_scene load_steps=45 format=3 uid="uid://56c2u7lelald"]
+[gd_scene load_steps=47 format=3 uid="uid://56c2u7lelald"]
 
 [ext_resource type="Script" path="res://platformer_controller/platformer_controller.gd" id="1_ywpf8"]
 [ext_resource type="Texture2D" uid="uid://b37wa67be2kr8" path="res://Images/player1.png" id="2_qg8gb"]
 [ext_resource type="Script" path="res://code/AnimatedSprite2D.gd" id="3_nvtev"]
-[ext_resource type="Script" path="res://MoneyManger.gd" id="4_htxpm"]
+[ext_resource type="Script" path="res://code/MoneyManger.gd" id="4_jdlmm"]
+[ext_resource type="Script" path="res://SENCES/IteamManger.gd" id="5_yd3if"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06vqf"]
 atlas = ExtResource("2_qg8gb")
@@ -436,6 +437,9 @@ _data = {
 "run": SubResource("Animation_j4swm")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2tb3"]
+size = Vector2(20, 32)
+
 [node name="Node2D" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
@@ -479,7 +483,7 @@ debug_color = Color(0.831373, 0.25098, 0.752941, 0.419608)
 
 [node name="MoneyManger" type="Node2D" parent="."]
 visible = false
-script = ExtResource("4_htxpm")
+script = ExtResource("4_jdlmm")
 totalmoney = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -510,6 +514,17 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="ItemManger" type="Node2D" parent="."]
+script = ExtResource("5_yd3if")
+
+[node name="pickuprange" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickuprange"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_o2tb3")
 
 [connection signal="area_entered" from="CamareHitBox" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="CamareHitBox" to="." method="_on_camare_hit_box_area_exited"]

@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcwhqtm7jm3cn"]
+[gd_scene load_steps=7 format=3 uid="uid://c657fmt0t4lgw"]
 
-[ext_resource type="Script" path="res://code/open_new_area.gd" id="1_1vq48"]
-[ext_resource type="Theme" uid="uid://djjeaqc78ns0e" path="res://FontTheme.tres" id="2_tufnb"]
+[ext_resource type="Script" path="res://SENCES/PickUpArea.gd" id="1_1wf04"]
+[ext_resource type="Theme" uid="uid://djjeaqc78ns0e" path="res://FontTheme.tres" id="2_tvnjd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnwma"]
-size = Vector2(20, 23)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1qy3"]
+size = Vector2(32, 32)
 
 [sub_resource type="Animation" id="Animation_hlu2c"]
 length = 0.001
@@ -43,15 +43,16 @@ _data = {
 "up and down": SubResource("Animation_2xp8e")
 }
 
-[node name="OpenNewArea" type="Area2D"]
+[node name="PickUparea" type="Area2D"]
 collision_layer = 4
 collision_mask = 4
 monitorable = false
-script = ExtResource("1_1vq48")
+script = ExtResource("1_1wf04")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -11.5)
-shape = SubResource("RectangleShape2D_mnwma")
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_h1qy3")
+debug_color = Color(0, 0.627451, 0.498039, 0.419608)
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -59,16 +60,13 @@ offset_left = 10.0
 offset_top = -37.0
 offset_right = 26.0
 offset_bottom = -6.0
-theme = ExtResource("2_tufnb")
+theme = ExtResource("2_tvnjd")
 text = "E"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_5qjdn")
 }
-
-[node name="enterpoint" type="Node2D" parent="."]
-position = Vector2(0, -11)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
