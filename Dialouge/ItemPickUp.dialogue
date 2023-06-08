@@ -1,5 +1,5 @@
 ~ itemPickUp
 
-You just picked up a {{NewestItem}}.
+You just picked up a {{NewestItemAmount}} {{NewestItem}}.
 
-=> END
+=> END!

@@ -88,7 +88,8 @@ func _ready() -> void:
 	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x
 	
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
-
+func _physics_process(delta):
+	Voice.CurrentSpeaker = $Balloon/Margin/VBox/CharacterLabel.text
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing

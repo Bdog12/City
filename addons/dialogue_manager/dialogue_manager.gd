@@ -66,6 +66,7 @@ func _ready() -> void:
 ## Step through lines and run any mutations until we either hit some dialogue or the end of the conversation
 func get_next_dialogue_line(resource: DialogueResource, key: String = "0", extra_game_states: Array = [], mutation_behaviour: MutationBehaviour = MutationBehaviour.Wait) -> DialogueLine:
 	# You have to provide a valid dialogue resource
+	
 	assert(resource != null, "No dialogue resource provided")
 	assert(resource.lines.size() > 0, "Dialogue file has no content.")
 
@@ -164,7 +165,7 @@ func _bridge_get_next_dialogue_line(resource: DialogueResource, key: String, ext
 # Get a line by its ID
 func get_line(resource: DialogueResource, key: String, extra_game_states: Array) -> DialogueLine:
 	key = key.strip_edges()
-
+	
 	# See if we were given a stack instead of just the one key
 	var stack: Array = key.split("|")
 	key = stack.pop_front()

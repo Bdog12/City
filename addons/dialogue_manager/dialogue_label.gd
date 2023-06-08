@@ -5,7 +5,7 @@ signal spoke(letter: String, letter_index: int, speed: float)
 signal paused_typing(duration: float)
 signal finished_typing()
 
-
+var CurrentSpeaker =""
 ## The action to press to skip typing
 @export var skip_action: String = "ui_cancel"
 
@@ -76,6 +76,7 @@ func type_out() -> void:
 	elif seconds_per_step == 0:
 		# Run any inline mutations
 		for i in range(0, get_total_character_count()):
+		
 			dialogue_line.mutate_inline_mutations(i)
 		visible_characters = get_total_character_count()
 		self.is_typing = false
@@ -83,6 +84,16 @@ func type_out() -> void:
 
 # Type out the next character(s)
 func type_next(delta: float, seconds_needed: float) -> void:
+	
+	
+	# Gets called every time a new character get shown
+	#print(visible_characters)
+	Voice.talk()
+	
+	
+	#
+	
+	
 	if visible_characters == get_total_character_count():
 		return
 

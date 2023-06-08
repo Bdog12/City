@@ -59,5 +59,5 @@ func calculate_target_position(room_center: Vector2, room_size: Vector2) -> Vect
  
 	return return_position
 func freeCarmera():
-	print("free")
-	
+	##print("free")
+	pass

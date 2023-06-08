@@ -23,6 +23,7 @@ func load_file():
 		get_tree().current_scene.get_node("PlatformingPlayer").position = PlayerPosition
 func CreatePlayerData():
 	var PlayerDict = {
-		"position" = get_tree().current_scene.get_node("PlatformingPlayer").position
-	}
+		"position" = get_tree().current_scene.get_node("PlatformingPlayer").position,
+		"Items" = ItemManger.PlayerItems
+ 	}
 	return PlayerDict

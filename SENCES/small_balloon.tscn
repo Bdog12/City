@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlkertfmdia2e"]
+[gd_scene load_steps=9 format=3 uid="uid://b361p61jmf257"]
 
-[ext_resource type="Script" path="res://SENCES/balloon.gd" id="1_4u26j"]
+[ext_resource type="Script" path="res://code/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Script" path="res://code/VoicesMaker.gd" id="3_vr2jb"]
 
 [sub_resource type="Theme" id="Theme_isg48"]
 default_font_size = 9
@@ -82,6 +83,9 @@ scroll_active = false
 shortcut_keys_enabled = false
 meta_underlined = false
 hint_underlined = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_vr2jb")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

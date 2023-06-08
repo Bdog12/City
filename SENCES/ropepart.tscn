@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://pbyhd0yinxlb"]
 
-[ext_resource type="Script" path="res://ropepart.gd" id="1_mln5v"]
+[ext_resource type="Script" path="res://code/ropepart.gd" id="1_mln5v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btqyy"]
 radius = 1.5

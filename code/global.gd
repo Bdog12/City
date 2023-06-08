@@ -1,7 +1,7 @@
 extends Node
 
 
-
+var trans = preload("res://SENCES/trans.tscn")
 
 
 var NewZone
@@ -14,7 +14,8 @@ var saved_scene = null
 
 		
 func changeStage(stage_path,returning):
-	
+	var instance = trans.instantiate()
+	add_child(instance)
 	
 	NewZone = "res://SENCES/" + stage_path + ".tscn"
 	get_tree().change_scene_to_file(NewZone)

@@ -1,0 +1,12 @@
+~ start
+Nathan: [[Hi|Hello|Howdy]], How can I help you?
+- Sell?
+	Sister: Thank You do 
+	do SellItems()
+	=> END
+- Buy?
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END!
+
+

@@ -9,6 +9,7 @@ func _ready():
 func _process(delta):
 	if $Label.visible == true:
 		if Input.is_action_just_pressed("interact"):
+			$Label.visible = false
 			var ballon:Node = Ballon.instantiate()
 			get_tree().current_scene.add_child(ballon)
 			ballon.start(dialogue_resource,dialogue_start)

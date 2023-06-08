@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://73jm5qjy52vq"]
 
-[ext_resource type="Script" path="res://balloon.gd" id="1_2w4ig"]
+[ext_resource type="Script" path="res://code/balloon.gd" id="1_2w4ig"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Theme" uid="uid://djjeaqc78ns0e" path="res://FontTheme.tres" id="3_w88e4"]
 

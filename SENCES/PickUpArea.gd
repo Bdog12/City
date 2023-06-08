@@ -13,15 +13,16 @@ func _process(delta):
 	if $Label.visible == true:
 		if Input.is_action_just_pressed("interact"):
 			ItemManger.NewestItem = $"..".Item.Name
+			ItemManger.NewestItemAmount =  $"..".Item.Amount
 			var ballon:Node = Ballon.instantiate()
 			get_tree().current_scene.add_child(ballon)
 			ballon.start(dialogue_resource,dialogue_start)
-			ItemManger.PlayerItems.append($"..".Item)
+			ItemManger.SellableItems.append($"..".Item)
 			
 					#color = fruit["color"]
 				
-			for PlayerItems in ItemManger.PlayerItems:
-				print(PlayerItems.Name)	
+			#for PlayerItems in ItemManger.PlayerItems:
+				#print(PlayerItems.Name)	
 			get_parent().queue_free()
 			pass
 

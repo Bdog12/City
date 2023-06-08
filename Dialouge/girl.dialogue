@@ -5,8 +5,8 @@
 set Talking = true
 Shop: [[Hi|Hello|Howdy]], [do Setitems()]this is some dialogue.
 Shop: Here are some choices.
-- First one [if Have == false ]
-	Nathan: you have my item 
+- First one [if Have == true ]
+	Sister: you have my item 
 	thank you
 - Second one
 	Nathan: You picked the second one.

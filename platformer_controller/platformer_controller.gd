@@ -328,7 +328,8 @@ func WallSlideig():
 				acc.y = 0
 				velocity.y =0
 				current_stamina -=2
-				print(current_stamina)
+				
+				##print(current_stamina)
 				if Input.is_action_just_pressed("space"):
 					wallJumping = true
 					if $AnimatedSprite2D.flip_h == true:
