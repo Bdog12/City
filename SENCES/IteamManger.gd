@@ -1,4 +1,5 @@
 extends Node2D
+var money =0
 var NewestItem =""
 var NewestItemAmount =0
 var  SellableItems = []
@@ -21,6 +22,6 @@ func SellItems():
 		SellValue += Items.Value
 		
 	print("Your total money gained was " + str(SellValue))
-	MoneyManger.totalmoney += SellValue
+	money += SellValue
 	SellableItems = []
 	pass

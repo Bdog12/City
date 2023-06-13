@@ -15,7 +15,8 @@ var zoom_view_size: Vector2
 func _ready() -> void:
 	# Sets smoothing to 1 and back to follow_smoothing
 	# I do this so the camera appears as if it starts at the first room not at (0, 0)
- 
+	$Ui.scale.x = 1/zoom.x
+	$Ui.scale.y = 1/zoom.y
 	#smoothing_enabled = false
 	smoothing = 1
 	await get_tree().create_timer(0.1).timeout

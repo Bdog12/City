@@ -5,7 +5,6 @@ class_name PlatformerController2D
 signal jumped(is_ground_jump: bool)
 signal hit_ground()
 signal EnterNewCamareZone
-
 # Set these to the name of your action (in the Input Map)
 ## Name of input action to move left.
 @export var input_left : String = "move_left"
@@ -159,6 +158,7 @@ func _input(_event):
 
 
 func _physics_process(delta):
+	
 	
 	if PlayerBools.Talking == false:
 		StaminaLabel()

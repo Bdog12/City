@@ -1,9 +1,8 @@
-[gd_scene load_steps=47 format=3 uid="uid://56c2u7lelald"]
+[gd_scene load_steps=46 format=3 uid="uid://56c2u7lelald"]
 
 [ext_resource type="Script" path="res://platformer_controller/platformer_controller.gd" id="1_ywpf8"]
 [ext_resource type="Texture2D" uid="uid://b37wa67be2kr8" path="res://Images/player1.png" id="2_qg8gb"]
 [ext_resource type="Script" path="res://code/AnimatedSprite2D.gd" id="3_nvtev"]
-[ext_resource type="Script" path="res://code/MoneyManger.gd" id="4_jdlmm"]
 [ext_resource type="Script" path="res://SENCES/IteamManger.gd" id="5_yd3if"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06vqf"]
@@ -480,11 +479,6 @@ collision_mask = 4
 position = Vector2(1, -5)
 shape = SubResource("RectangleShape2D_cn01k")
 debug_color = Color(0.831373, 0.25098, 0.752941, 0.419608)
-
-[node name="MoneyManger" type="Node2D" parent="."]
-visible = false
-script = ExtResource("4_jdlmm")
-totalmoney = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

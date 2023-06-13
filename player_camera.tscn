@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8gtdfk1jc6xl"]
+
+[ext_resource type="Script" path="res://code/PlayerCamera.gd" id="1_b2b1h"]
+[ext_resource type="PackedScene" uid="uid://coticju118qjm" path="res://ui.tscn" id="2_gjpth"]
+
+[node name="PlayerCamera" type="Camera2D"]
+rotation = -0.165916
+scale = Vector2(1, 0.999999)
+zoom = Vector2(2, 2)
+process_callback = 0
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("1_b2b1h")
+
+[node name="Ui" parent="." instance=ExtResource("2_gjpth")]
+visible = false
+offset_left = -414.857
+offset_top = -325.993
+offset_right = -414.857
+offset_bottom = -325.993
+rotation = 0.171688
+scale = Vector2(0.5, 0.5)

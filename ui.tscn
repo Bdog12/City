@@ -1,0 +1,447 @@
+[gd_scene load_steps=14 format=3 uid="uid://coticju118qjm"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_v4p4u"]
+[ext_resource type="Texture2D" uid="uid://niuclv4t0fd4" path="res://Images/uiBook2.png" id="2_qtwd3"]
+[ext_resource type="Texture2D" uid="uid://diyelb858jigg" path="res://Images/UiQuestMaker.png" id="2_qwu0j"]
+[ext_resource type="Texture2D" uid="uid://cnxdbfah3ukbq" path="res://Images/UiMap.png" id="3_ievhc"]
+[ext_resource type="Texture2D" uid="uid://bpah2smnwtgu6" path="res://Images/UiBackPack.png" id="4_18186"]
+[ext_resource type="Theme" uid="uid://djjeaqc78ns0e" path="res://FontTheme.tres" id="4_ggyda"]
+[ext_resource type="Texture2D" uid="uid://clkkcjllsexmy" path="res://Images/uiBook.png" id="5_dqjmb"]
+
+[sub_resource type="Animation" id="Animation_c2ymv"]
+resource_name = "0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopHolder/QuestMarker:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopHolder/MapMarker:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TopHolder/BackPackMarker:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Books/Quest:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Books/Backpack:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_utlid"]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopHolder/BackPackMarker:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopHolder/MapMarker:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TopHolder/QuestMarker:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wqskl"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopHolder/QuestMarker:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopHolder/MapMarker:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TopHolder/BackPackMarker:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Books/Backpack:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Books/Quest:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0s4io"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopHolder/QuestMarker:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopHolder/MapMarker:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TopHolder/BackPackMarker:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Books/Quest:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Books/Backpack:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cdxjv"]
+_data = {
+"0": SubResource("Animation_c2ymv"),
+"1": SubResource("Animation_utlid"),
+"2": SubResource("Animation_wqskl"),
+"RESET": SubResource("Animation_0s4io")
+}
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jq748"]
+polygon = PackedVector2Array(94, 458, -7, 1078, 907, 776, 2652, 824, 2831, 208)
+
+[node name="Ui" type="Control"]
+light_mask = 0
+visibility_layer = 16
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4p4u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -555.0
+offset_top = -465.0
+offset_right = 2379.0
+offset_bottom = 1331.0
+color = Color(0, 0, 0, 0.458824)
+
+[node name="Books" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Backpack" type="TextureRect" parent="Books"]
+visible = false
+light_mask = 0
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_qtwd3")
+
+[node name="Quest" type="TextureRect" parent="Books"]
+light_mask = 0
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+texture = ExtResource("5_dqjmb")
+
+[node name="QuestHolder" type="Control" parent="Books/Quest"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+
+[node name="quest1" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 252.0
+offset_right = 909.0
+offset_bottom = 350.0
+theme = ExtResource("4_ggyda")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her. "
+autowrap_mode = 1
+
+[node name="quest2" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 364.0
+offset_right = 909.0
+offset_bottom = 479.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her."
+autowrap_mode = 1
+
+[node name="quest3" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 493.0
+offset_right = 909.0
+offset_bottom = 608.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her."
+autowrap_mode = 1
+
+[node name="quest4" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 623.0
+offset_right = 909.0
+offset_bottom = 738.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her."
+autowrap_mode = 1
+
+[node name="quest5" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 748.0
+offset_right = 909.0
+offset_bottom = 863.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her."
+autowrap_mode = 1
+
+[node name="quest6" type="Label" parent="Books/Quest/QuestHolder"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 874.0
+offset_right = 909.0
+offset_bottom = 989.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 36
+text = "Find a whitye flower for your sister and bring it back to her."
+autowrap_mode = 1
+
+[node name="TopHolder" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = -12.0
+offset_right = 1343.0
+offset_bottom = 217.0
+theme_override_constants/separation = 1
+
+[node name="QuestMarker" type="TextureRect" parent="TopHolder"]
+layout_mode = 2
+texture = ExtResource("2_qwu0j")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TopHolder/QuestMarker"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 189.0
+offset_right = 178.0
+offset_bottom = 248.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 64
+text = "Quest"
+
+[node name="MapMarker" type="TextureRect" parent="TopHolder"]
+modulate = Color(0.780392, 0.780392, 0.780392, 1)
+layout_mode = 2
+texture = ExtResource("3_ievhc")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TopHolder/MapMarker"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 189.0
+offset_right = 197.0
+offset_bottom = 248.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 64
+text = "Map"
+
+[node name="BackPackMarker" type="TextureRect" parent="TopHolder"]
+modulate = Color(0.780392, 0.780392, 0.780392, 1)
+layout_mode = 2
+texture = ExtResource("4_18186")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TopHolder/BackPackMarker"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 186.0
+offset_right = 248.0
+offset_bottom = 245.0
+theme = ExtResource("4_ggyda")
+theme_override_font_sizes/font_size = 64
+text = "Backpack"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_left = 159.0
+offset_top = 251.0
+offset_right = 270.0
+offset_bottom = 251.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cdxjv")
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-585, -832)
+occluder = SubResource("OccluderPolygon2D_jq748")
+
+[node name="money" type="Label" parent="."]
+layout_mode = 0
+offset_top = 146.0
+offset_right = 167.0
+offset_bottom = 199.0
+theme = ExtResource("4_ggyda")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 48
+text = "asd"

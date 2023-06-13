@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://dkn7kmd0hbwdu"]
+
+[ext_resource type="Script" path="res://code/item.gd" id="1_f8c3w"]
+[ext_resource type="Texture2D" uid="uid://d0uushbl0ncfi" path="res://Images/whiteFlower.png" id="2_h5d3i"]
+
+[resource]
+script = ExtResource("1_f8c3w")
+Name = "White Flower"
+texture = ExtResource("2_h5d3i")
+Value = 4
+Amount = 1
+description = ""
